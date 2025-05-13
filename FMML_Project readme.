@@ -1,0 +1,147 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/anjali-1002/FFML_Projects_and_Labs/blob/main/FMML_Project%20readme.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "STUDENT PERFORMANCE PREDICTION USING MACHINE LEARNING\n",
+        "\n",
+        "---\n",
+        "https://archive.ics.uci.edu/dataset/320/student+performance\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "CdrGaZwo50Pw"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Overview\n",
+        "This project aims to predict students' academic performance using machine learning algorithms. It leverages student-related features such as past grades, study time, family support, and more to predict the final grade (G3) and classify whether a student will pass or fail.\n",
+        "\n",
+        "Objectives\n",
+        "- Predict final grade (G3) with high accuracy.\n",
+        "- Classify student status: Pass (G3 >= 10) or Fail.\n",
+        "- Identify key factors influencing performance.\n",
+        "- Compare different machine learning models.\n",
+        "- Provide actionable insights for educational interventions.\n",
+        "\n",
+        "\n",
+        " Dataset\n",
+        "\n",
+        "- Source: UCI Machine Learning Repository  \n",
+        "- Dataset Name: [Student Performance Data Set](https://archive.ics.uci.edu/ml/datasets/Student+Performance)  \n",
+        "- File Used: student-mat.csv\n",
+        "- Instances: 395 students  \n",
+        "- Features: 33 features including:\n",
+        "  - Demographic: Age, Sex, Address\n",
+        "  - Academic: G1, G2 (1st and 2nd period grades), Study Time, Failures\n",
+        "  - Social: Family Support, Internet Access, Alcohol Consumption\n"
+      ],
+      "metadata": {
+        "id": "PnnkVWrV4SLB"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Methodology\n",
+        "\n",
+        "1. Data Preprocessing\n",
+        "   - Handled categorical variables using Label Encoding.\n",
+        "   - Defined regression and classification targets (G3 and pass/fail).\n",
+        "\n",
+        "2. Train-Test Split\n",
+        "   - 80% for training, 20% for testing.\n",
+        "\n",
+        "3. Model Training\n",
+        "   - Linear Regression\n",
+        "   - Random Forest Regressor (with GridSearchCV tuning)\n",
+        "   - XGBoost Regressor\n",
+        "   - Random Forest Classifier for Pass/Fail classification\n",
+        "\n",
+        "4. Evaluation Metrics\n",
+        "   - R² Score, RMSE for regression\n",
+        "   - Accuracy, Precision, Recall, F1-score for classification\n",
+        "\n",
+        "5. Feature Importance\n",
+        "   - Analyzed using Random Forest\n",
+        "\n",
+        "6. Model Saving\n",
+        "   - Best-performing model saved using joblib for reuse.\n"
+      ],
+      "metadata": {
+        "id": "edL-1po95IGE"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Results\n",
+        "\n",
+        "- Best Regression Model: Random Forest Regressor  \n",
+        "  - R² Score: 0.87  \n",
+        "  - RMSE: ~1.89\n",
+        "\n",
+        "- Best Classification Accuracy: ~91% using Random Forest Classifier\n",
+        "\n",
+        "- Most Influential Features:\n",
+        "  - G1 (1st Period Grade)\n",
+        "  - G2 (2nd Period Grade)\n",
+        "  - Study Time\n",
+        "  - Past Failures\n",
+        "  - Family Support\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "WR7l893p5b5E"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "References\n",
+        "\n",
+        "1. Cortez, P., & Silva, A. (2008). Using Data Mining to Predict Secondary School Student Performance.\n",
+        "\n",
+        "\n",
+        "2. Bhardwaj, B. K., & Pal, S. (2011). Data Mining: A prediction for performance improvement using classification.\n",
+        "\n",
+        "\n",
+        "3. Al-Barrak, M. A., & Al-Razgan, M. (2016). Predicting Students Final GPA Using Decision Trees: A Case Study.\n",
+        "\n",
+        "\n",
+        "4. UCI ML Repository: Student Performance Data Set\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "vtggl3hR5k6V"
+      }
+    }
+  ]
+}
